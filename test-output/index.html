@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-MJ6_Regression" title="testCases.TC" class="method navigator-link" hash-for-method="searchJobs(Selenium, London, up to 5 miles, 30000, 40000, Per annum, Any)">searchJobs(Selenium, London, up to 5 miles, 30000, 40000, Per annum, Any)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MJ6_Regression" title="testCases.TC" class="method navigator-link" hash-for-method="searchJobs(Selenium, Glasglow, up to 5 miles, 30000, 40000, Per annum, Any)">searchJobs(Selenium, Glasglow, up to 5 miles, 30000, 40000, Per annum, Any)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MJ6_Regression -->
@@ -133,6 +138,14 @@
                   <span class="parameters">(Selenium, London, up to 5 miles, 30000, 40000, Per annum, Any)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchJobs(Selenium, Glasglow, up to 5 miles, 30000, 40000, Per annum, Any)">
+                  </a> <!-- searchJobs(Selenium, Glasglow, up to 5 miles, 30000, 40000, Per annum, Any) -->
+                  <span class="method-name">searchJobs</span>
+                  <span class="parameters">(Selenium, Glasglow, up to 5 miles, 30000, 40000, Per annum, Any)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-MJ6_Regression-class-passed -->
         </div> <!-- panel MJ6_Regression -->
@@ -145,7 +158,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;MJ6 Regression&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;testingggg&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;testing&quot;&gt;
     &lt;parameter name=&quot;keywords&quot; value=&quot;Selenium&quot;/&gt;
     &lt;parameter name=&quot;distance&quot; value=&quot;up to 5 miles&quot;/&gt;
     &lt;parameter name=&quot;maxSal&quot; value=&quot;40000&quot;/&gt;
@@ -156,7 +169,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;testCases.TC&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- testingggg --&gt;
+  &lt;/test&gt; &lt;!-- testing --&gt;
 &lt;/suite&gt; &lt;!-- MJ6 Regression --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -168,7 +181,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">testingggg (1 class)</span>
+                <span class="test-name">testing (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,16 +207,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchJobs')
 data.setCell(0, 2, 'testCases.TC')
-data.setCell(0, 3, 21132);
+data.setCell(0, 3, 18726);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'searchJobs')
+data.setCell(1, 2, 'testCases.TC')
+data.setCell(1, 3, 13962);
 window.suiteTableData['MJ6_Regression']= { tableData: data, tableDiv: 'times-div-MJ6_Regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-MJ6_Regression">
               </div> <!-- times-div-MJ6_Regression -->
             </div> <!-- times-div -->
@@ -236,7 +253,11 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">searchJobs(Selenium, London, up to 5 miles, 30000, 40000, Per annum, Any)</span>
-                <span class="method-start">522 ms</span>
+                <span class="method-start">560 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchJobs(Selenium, Glasglow, up to 5 miles, 30000, 40000, Per annum, Any)</span>
+                <span class="method-start">19299 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
