@@ -35,8 +35,8 @@ public class TC {
 			home.selectDistance(test, distance);
 			home.enterMinSalary(test, minSal);
 			home.enterMaxSalary(test, maxSal);
-			home.selectSalaryType(test, jobType);
-			home.selectJobType(test, jobType);
+			home.selectSalaryType(test, salType);
+//			home.selectJobType(test, jobType);
 			home.clickFindJobs(test);
 			
 			

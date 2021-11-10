@@ -110,6 +110,7 @@ public class MyFunctions {
 				if (attempt <= 3) {
 					test.getLogger().error("WebDriver Exception");
 					staticWait(2000);
+					
 				} else
 					throw e;
 			}
@@ -134,5 +135,12 @@ public class MyFunctions {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	
+	public void clickJS(Testing test, WebElement element) {
+		((JavascriptExecutor) test.driver).executeScript("arguments[0].click();", element);
+	}
+	
 
 }

@@ -1,7 +1,6 @@
 resources\BrowserFactory.class
 testNGListeners\ITestAnnotation.class
 resources\TestData.class
-resources\Utility.class
 resources\Testing.class
 applicationPages\HomePage.class
 resources\MyFunctions.class

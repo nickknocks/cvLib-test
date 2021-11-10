@@ -1,8 +1,15 @@
 package applicationPages;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import resources.Testing;
 
 public class HomePage {
@@ -12,7 +19,7 @@ public class HomePage {
 
 	public void toggleSearchOptions(Testing test) {
 		test.myFunctions().click(test, moreSearchOptionToggler);
-		test.getLogger().info("");
+		test.getLogger().info("Clicked More Search.");
 	}
 //	-----------------------------------------------------------------------------------
 
@@ -21,7 +28,7 @@ public class HomePage {
 
 	public void enterKeywords(Testing test, String keywords) {
 		test.myFunctions().type(test, textBox_keywords, keywords);
-		test.getLogger().info("");
+		test.getLogger().info("Enterred keywords.");
 	}
 //	-----------------------------------------------------------------------------------
 
@@ -30,7 +37,7 @@ public class HomePage {
 
 	public void enterLocation(Testing test, String location) {
 		test.myFunctions().type(test, textBox_Location, location);
-		test.getLogger().info("");
+		test.getLogger().info("Entered location.");
 	}
 //	-----------------------------------------------------------------------------------
 
@@ -39,7 +46,7 @@ public class HomePage {
 
 	public void selectDistance(Testing test, String distance) {
 		test.myFunctions().dropdown(test, dropdown_Distance, distance);
-		test.getLogger().info("");
+		test.getLogger().info("Entered distance");
 	}
 //	-----------------------------------------------------------------------------------
 
@@ -48,7 +55,7 @@ public class HomePage {
 
 	public void enterMinSalary(Testing test, String minSalary) {
 		test.myFunctions().type(test, textBox_MinSalary, minSalary);
-		test.getLogger().info("");
+		test.getLogger().info("Entered min salary");
 	}
 
 //	-----------------------------------------------------------------------------------
@@ -58,7 +65,7 @@ public class HomePage {
 
 	public void enterMaxSalary(Testing test, String maxSalary) {
 		test.myFunctions().type(test, textBox_MaxSalary, maxSalary);
-		test.getLogger().info("");
+		test.getLogger().info("Entered max salary.");
 	}
 
 //	-----------------------------------------------------------------------------------
@@ -67,13 +74,16 @@ public class HomePage {
 	private WebElement dropdown_SalaryType;
 
 	public void selectSalaryType(Testing test, String salaryType) {
-		try {
-			test.myFunctions().staticWait(4000);
-			test.myFunctions().type(test, dropdown_SalaryType, salaryType);
+
+//			test.myFunctions().staticWait(4000);
+			test.myFunctions().dropdown(test, dropdown_SalaryType, salaryType);
 			test.getLogger().info("Selected salary type");
-		} catch (Exception e) {
-			test.getLogger().error("Exception occured while selecting Salary type");
-		}
+
+//		WebElement option = test.driver
+//				.findElement(By.xpath("//*[@id=\"salarytype\"]/option[text()='" + salaryType + "']"));
+//		test.myFunctions().click(test, dropdown_SalaryType);
+//		test.myFunctions().staticWait(2000);
+//		test.myFunctions().clickJS(test, option);
 
 	}
 
@@ -83,8 +93,8 @@ public class HomePage {
 	private WebElement dropdown_JobType;
 
 	public void selectJobType(Testing test, String jobType) {
-		test.myFunctions().type(test, dropdown_JobType, jobType);
-		test.getLogger().info("");
+		test.myFunctions().dropdown(test, dropdown_JobType, jobType);
+		test.getLogger().info("selected job type");
 	}
 
 //	-----------------------------------------------------------------------------------
@@ -94,6 +104,9 @@ public class HomePage {
 
 	public void clickFindJobs(Testing test) {
 		test.myFunctions().click(test, button_FindJobs);
-		test.getLogger().info("");
+		test.getLogger().info("Clicked on Find Job.");
+		WebDriverWait wait = new WebDriverWait(test.driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.titleContains("Jobs"));
+		test.getLogger().pass("Landed on Search Rersult page.");
 	}
 }
