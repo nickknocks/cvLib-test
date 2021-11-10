@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MJ6 Regression" thread-count="1" parallel="methods">
+
+	<test name="testingggg">
+		<parameter name="keywords" value="Selenium" />
+		<parameter name="location" value="London" />
+		<parameter name="distance" value="up to 5 miles" />
+		<parameter name="minSal" value="30000" />
+		<parameter name="maxSal" value="40000" />
+		<parameter name="salType" value="Per annum" />
+		<parameter name="jobType" value="Any" />
+		<classes>
+			<class name="testCases.TC">
+
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

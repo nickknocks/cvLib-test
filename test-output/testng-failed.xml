@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="methods" name="Failed suite [MJ6 Regression]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="methods" name="testingggg(failed)">
+    <parameter name="keywords" value="Selenium"/>
+    <parameter name="distance" value="up to 5 miles"/>
+    <parameter name="maxSal" value="40000"/>
+    <parameter name="salType" value="Per annum"/>
+    <parameter name="minSal" value="30000"/>
+    <parameter name="location" value="London"/>
+    <parameter name="jobType" value="Any"/>
+    <classes>
+      <class name="testCases.TC">
+        <methods>
+          <include name="searchJobs" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- testCases.TC -->
+    </classes>
+  </test> <!-- testingggg(failed) -->
+</suite> <!-- Failed suite [MJ6 Regression] -->
